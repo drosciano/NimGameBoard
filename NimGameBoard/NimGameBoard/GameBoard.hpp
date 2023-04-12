@@ -11,8 +11,6 @@ class GameBoard {
 private:
 	//how many piles
 	 int piles;
-	//how many stones
-	 int rocksPerPile;
 
 	 string seed;
 
@@ -22,7 +20,7 @@ private:
 
 public:
 	GameBoard();
-	GameBoard(int pile, int rocksPerPile);
+	GameBoard(string s);
 	void printSeed() { cout << seed << endl; };
 	void printBoard(string board);
 	int getPiles() { return piles; };

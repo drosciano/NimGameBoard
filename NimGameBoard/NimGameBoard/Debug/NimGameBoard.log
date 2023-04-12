@@ -1,6 +1,2 @@
 ﻿  GameBoard.cpp
-C:\Users\Duilio Rosciano\OneDrive\Documents\Networking\NimGameBoard\NimGameBoard\GameBoard.cpp(8,1): error C2143: syntax error: missing ';' before '}'
-  Source.cpp
-C:\Users\Duilio Rosciano\OneDrive\Documents\Networking\NimGameBoard\NimGameBoard\Source.cpp(7,6): error C2039: 'printBoardString': is not a member of 'GameBoard'
-C:\Users\Duilio Rosciano\OneDrive\Documents\Networking\NimGameBoard\NimGameBoard\GameBoard.hpp(10): message : see declaration of 'GameBoard'
-  Generating Code...
+  NimGameBoard.vcxproj -> C:\Users\Duilio Rosciano\OneDrive\Documents\Networking\NimGameBoard\Debug\NimGameBoard.exe

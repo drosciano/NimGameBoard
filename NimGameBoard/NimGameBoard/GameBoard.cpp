@@ -3,34 +3,23 @@
 GameBoard::GameBoard()
 {
 	piles = 3;
-	rocksPerPile = 1;
-	seed = "3010203"
+	seed = "3010203";
 }
 
-GameBoard::GameBoard(int pile, int rocks)
+GameBoard::GameBoard(string s)
 {
-	piles = pile;
-	rocksPerPile = rocks;
-	stringstream pileNum;
-	pileNum << piles;
-	seed = pileNum.str();
-	for (int i = 1; i <= rocksPerPile; i++) {
-		stringstream iS;
-		iS << i;
-		if (i < 10) {
-			seed = seed.append("0");
-			seed = seed.append(iS.str());
-		}
-		else {
-			seed = seed.append(iS.str());
-		}
+
+	piles = int(s[0] - '0');
+
+	for (int i = 1; i <= piles * 2; i += 2) {
+		char t1 = s[i];
+		char t2 = s[i + 1];
+		int rocksPerPile = (int(t1) - '0') * 10 + int(t2) - '0';
+			Piles temp(rocksPerPile);
+			Board.push_back(temp);
 	}
 
-	for (int i = 1; i <= piles; i++) {
-		Piles temp(rocksPerPile);
-		Board.push_back(temp);
-	}
-	
+	seed = s;
 }
 
 void GameBoard::printBoard(string board)
@@ -48,7 +37,7 @@ int GameBoard::getRocksInPile(int pileNum)
 	return Board.at(pileNum - 1).getRocks();
 }
 
-void GameBoard::grabRocksFromPile(int pileNum, int rockNum)
+void GameBoard::grabRocksFromPile(int rockNum, int pileNum)
 {
 	Board.at(pileNum - 1).grabRock(rockNum);
 }

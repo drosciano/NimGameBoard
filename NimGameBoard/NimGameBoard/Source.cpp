@@ -2,15 +2,15 @@
 
 
 int main() {
-	GameBoard Nim(3, 14);
+	GameBoard Nim("50513070915");
 
-	Nim.printBoardString();
+	Nim.printSeed();
 
 	for (int i = 1; i <= Nim.getPiles(); i++) {
 		cout << "Pile: " << i << " has " << Nim.getRocksInPile(i) << " rocks" << endl;
 	}
 	Nim.grabRocksFromPile(4, 3);
-	for (int i = 1; i <= 3; i++) {
+	for (int i = 1; i <= Nim.getPiles(); i++) {
 		cout << "Pile: " << i << " has " << Nim.getRocksInPile(i) << " rocks" << endl;
 	}
 
