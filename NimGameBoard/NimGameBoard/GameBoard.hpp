@@ -4,19 +4,15 @@
 #include<string>
 #include<sstream>
 #include<vector>
+#include<stdexcept>
 
 using namespace std;
 
 class GameBoard {
 private:
-	//how many piles
 	 int piles;
-
 	 string seed;
-
 	 vector<Piles>Board;
-
-
 
 public:
 	GameBoard();
@@ -26,4 +22,5 @@ public:
 	int getPiles() { return piles; };
 	int getRocksInPile(int pileNum);
 	void grabRocksFromPile(int rockNum, int pileNum);
+	bool validMove(string s);
 };
